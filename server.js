@@ -19,6 +19,13 @@ app.get('/', async (req, res) => {
     return res.status(400).json(error)
   }
 })
+app.get('/test', async (req, res) => {
+  try {
+    return res.status(200).json({message: 'test'})
+  } catch (error) {
+    return res.status(400).json(error)
+  }
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
